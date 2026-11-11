@@ -1,0 +1,26 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# findex
+data/
+/index.*
+*.pkl
+.coverage
+htmlcov/
+.pytest_cache/
+.ruff_cache/
+crawl.log
+profiles/
+
+node_modules/
+.wrangler/
+.benchmarks/
+.hypothesis/

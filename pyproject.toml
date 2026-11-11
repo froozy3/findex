@@ -1,0 +1,64 @@
+[project]
+name = "findex"
+version = "1.0.0"
+description = "Full-text search engine over your own corpus: inverted index, BM25, query language, CLI."
+readme = "README.md"
+authors = [
+    { name = "Vladyslav", email = "tsemkalo2006@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.162.2",
+    "httpx>=0.28.1",
+    "jinja2>=3.1.6",
+    "numpy>=2.5.4",
+    "pydantic-settings>=2.16.2",
+    "rich>=15.0.0",
+    "selectolax>=1.0.2",
+    "typer>=0.28.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.optional-dependencies]
+semantic = ["sentence-transformers>=6.2.0"]
+
+[project.scripts]
+findex = "findex.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.10.4,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "flameprof>=0.4",
+    "hypothesis>=6.170.15",
+    "matplotlib>=3.11.2",
+    "pyright>=1.1.414",
+    "pytest>=9.2.0",
+    "pytest-benchmark>=5.3.1",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.17.4",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["RUF001"]  # the typographic apostrophe in the tokenizer is intentional
+
+[tool.pyright]
+include = ["src", "tests", "scripts"]
+typeCheckingMode = "strict"
+pythonVersion = "3.13"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = ["slow: tests that take more than a second"]
+
+[tool.coverage.run]
+source = ["findex"]
+branch = true
