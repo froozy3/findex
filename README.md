@@ -173,3 +173,42 @@ CPU time grows with workers (30 s at 10 threads) because of contention, and the 
 each worker builds its own private `PartialIndex`; the only shared mutable state would have been a shared `Counter`, which is why it is not shared.
 `--executor processes` is the CLI default, and the entry point is `spawn`-safe (`__main__.py` has the `if __name__ == "__main__"` guard).
 
+## Lab 6 — async crawler
+
+`crawler/fetch.py`: `asyncio.timeout`, ≤ 3 retries for 429/5xx/timeouts with exponential backoff + jitter, `Retry-After` honoured,
+no retry for other 4xx, redirect loops detected. `robots.py`: `RobotsCache` (one download per host; 404 → allow, 5xx/unreachable → disallow;
+`Crawl-delay` respected). `crawl.py`: `asyncio.Queue` frontier, `TaskGroup` workers, global + per-host semaphores, per-host minimum delay,
+URL canonicalization + `seen` set, HTML parsing off the loop via `asyncio.to_thread`, async-generator output, clean cancellation.
+`findex crawl <seed> --max-pages --concurrency --per-host --delay --out data/crawl.jsonl` streams one JSON line per page (consumed by
+`findex index data/crawl.jsonl`), shows a live `rich` table, writes `crawl.log`. Tests use `httpx.MockTransport` (no network).
+
+**Ethics / permission.** The benchmark crawled a **local mirror I run myself** (`scripts/mirror_site.py`, 600 generated pages, 80 ms latency) — no third
+party was contacted. Set `--contact` to your own URL/e-mail before crawling anything real, and crawl only sites you have permission for.
+
+200-page budget (199 pages fetched: one claimed slot went to the `robots.txt`-disallowed link), `scripts/crawl_bench.sh`:
+
+| Concurrency | per-host | delay | Pages | Wall (s) | Pages/s | Errors | Peak RSS (MB) |
+|---|---|---|---|---|---|---|---|
+| 1 | 1 | 0 | 199 | 17.6 | 11.3 | 0 | 57 |
+| 5 | 5 | 0 | 199 | 3.8 | 52.4 | 0 | 49 |
+| 20 | 20 | 0 | 199 | 1.4 | 142.1 | 0 | 50 |
+| 20 | 2 | 0.1 s | 199 | 20.1 | 9.9 | 0 | 50 |
+
+Why one thread with 20 tasks wins: every request is ~80 ms of waiting, so a single event loop overlaps 20 waits with no thread/GIL switching
+and a flat ~50 MB (Lab 5's processes would cost ~150 MB each and pickling). The last row is what politeness costs: with 2 requests per host and
+0.1 s between them the crawl falls back to ~10 pages/s no matter how many workers exist — I kept those limits as the *default* for real sites
+(I only lifted them for my own mirror). Indexing is outside the loop (a separate `findex index` step), and HTML parsing is moved to a thread so the
+loop never runs CPU-heavy code. Verified with `asyncio.run(..., debug=True)` and `slow_callback_duration = 0.1`
+(`scripts/crawl_debug_check.py`, `docs/crawl_debug_check.txt`): 99 pages crawled, no slow-callback warnings, i.e. no blocking call in a coroutine. Failure handling, from `docs/crawl_faults.log` (mirror started with `--faults`):
+
+```
+retry 1/3 for /limited in 1.0s (HTTP 429)          <- Retry-After: 1 honoured
+retry 1/3 for /flaky in 0.3s (HTTP 503)
+retry 2/3 for /flaky in 1.0s (HTTP 503)
+200 /flaky 1351ms attempts=3
+200 /limited 1012ms attempts=2
+ERR /loop 8ms attempts=1 (redirect loop)
+SKIP robots.txt disallows /private/secret
+retry 1/3 .. 3/3 for /slow (TimeoutError)  ->  ERR /slow 43070ms attempts=4
+```
+
