@@ -52,3 +52,40 @@ or hyphen stays inside the token (`don't`, `well-known`); `_` splits; digits are
 The eager version keeps the whole token stream alive (12 M `str` objects plus list slots ≈ 790 MB); the lazy one holds one
 passage, its token list and the `Counter` (141 k terms) ≈ 35 MB — not zero because of the `Counter` and one passage.
 
+## Lab 2 — the inverted index
+
+`Posting` / `DocMeta` are `@dataclass(frozen=True, slots=True)` (hashable). Index built in one streaming pass with `defaultdict`.
+Positions are optional (`--positions`).
+
+**Merge vs set** (µs per operation, median of 200 runs, `scripts/lab_measurements.py merge`):
+
+| Pair | Postings sizes | merge AND | set AND | merge OR | set OR | AND winner |
+|---|---|---|---|---|---|---|
+| two most common: `in`, `a` | 10078 / 10396 | 622 | 275 | 641 | 294 | set |
+| two rarest (df≥5) | 5 / 5 | 0 | 0 | 1 | 0 | tie |
+| common + rare: `in`, `labour’s` | 10078 / 5 | 412 | 53 | 473 | 124 | set |
+
+Both are O(n+m), but `set` runs in C while the two-pointer merge is a Python loop, so `set` wins everywhere in CPython.
+The merge's real advantage — no hashing, sorted output for free, galloping/skip pointers possible — doesn't show up in pure Python.
+
+**Persistence** (`scripts/lab_measurements.py formats`):
+
+| Format | File size | Save | Load |
+|---|---|---|---|
+| pickle | 120 MB | 7.4 s | 7.6 s |
+| json | 127 MB | 5.9 s | 8.3 s |
+
+`pickle.load` executes arbitrary code embedded in the file (a crafted pickle runs `os.system` via `__reduce__`),
+so it must never be used on a file you did not build yourself — see the comment in `store.py`.
+
+**Memory study** (postings only, no positions, tracemalloc):
+
+| Postings representation | Peak build memory | Pickle size | Pickle load |
+|---|---|---|---|
+| `list[Posting]`, plain `@dataclass` | 510 MB | 95 MB | 1.06 s |
+| `list[Posting]`, `slots=True` | 313 MB | 110 MB | 0.90 s |
+| `array('I')` pairs, no objects | 99 MB | 46 MB | 0.07 s |
+
+A plain instance carries a ~100-byte `__dict__`; `slots=True` removes it (−39 %). Each 5 M postings then still costs an
+object header + two `int` pointers (~56 B); `array('I')` stores 8 bytes per posting with no per-element objects (−81 %).
+
