@@ -1,0 +1,7 @@
+[
+  {"query": "a sea captain obsessed with hunting a giant animal for revenge", "relevant_books": ["pg2701"]},
+  {"query": "a young woman rejects a proud rich man's first proposal of marriage", "relevant_books": ["pg1342"]},
+  {"query": "a scientist builds a living creature from dead bodies and then abandons it", "relevant_books": ["pg84"]},
+  {"query": "a detective uses logic and observation to solve a crime", "relevant_books": ["pg1661", "pg108", "pg244", "pg2852"]},
+  {"query": "a girl follows a talking animal down into a strange underground world", "relevant_books": ["pg11"]}
+]

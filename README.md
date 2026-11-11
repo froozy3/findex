@@ -245,3 +245,86 @@ rejected the account, so nothing is live. A free alternative is a Cloudflare Tun
 (`docker run -p 8001:8000 findex:1.0.0` + `cloudflared tunnel --url http://localhost:8001`), but that publishes this machine and was not started without your say-so.
 Once a URL exists, paste it at the top of this README and run `scripts/loadtest.py <url> --concurrency 20` for the "deployed" row.
 
+## Lab 8 — fast, then smart
+
+**Profile** (`scripts/profile_hotspots.py`, `docs/profile_report.md`, cProfile; py-spy/Scalene were not run — py-spy needs `sudo` on macOS. Flame graphs are rendered
+from the cProfile data with `flameprof`: `docs/flame_index.svg` (build) and `docs/flame_search.svg` (search with snippets, 300 requests, before the snippet fix is *not* in
+the graph — it shows the optimized state). For a native-vs-Python split run `sudo py-spy record -o docs/flame.svg -- uv run findex search index.pkl "white whale"`).
+Hypotheses written before measuring: (1) indexing is dominated by the tokenizer regex + `casefold` per token; (2) `search` is dominated by the per-posting
+Python call to `Scorer.score`; (3) snippets are cheap.
+
+| Command | Measured top hotspots | Hypothesis |
+|---|---|---|
+| `findex index` (6.4 s) | `tokenize` generator 4.0 s cum. (12 M iterations), `Posting` generator in `merge` 3.7 s cum., `build_partial` body 1.3 s | (1) confirmed: Python-time, ~63 % in the per-token loop |
+| `findex search` "white whale captain" ×300, no snippets | `score_documents` 0.07 s total, `Scorer.score` 38 850 calls | (2) wrong: whole search ≈ 0.2 ms — scoring is not the problem for rare terms |
+| `findex search` "white whale" ×300 with snippets | `iter_token_spans` 1.96 s cum. (3.5 M tokens regex-scanned) of 2.25 s | (3) wrong: snippets are 97 % of request time |
+
+**Fix 1 — snippets:** find matches with one compiled regex over the passage instead of tokenizing all of it (equivalence with the tokenizing
+reference is tested incl. Cyrillic, combining accents, `ß` → exact fallback path): 2.25 s → 0.39 s per 300 requests (**5.8×**).
+
+**Fix 2 — vectorized scorer** (`findex vectorize index.pkl --out data/vectors`, `findex search data/vectors "..."`): postings in CSR layout
+(`int32` doc_ids / tfs / offsets, `doc_len` `int32[N]`), BM25 and TF-IDF as array expressions, boolean evaluation via `np.intersect1d/union1d/setdiff1d`,
+top-k via `np.partition` + `np.lexsort` (higher score first, lower doc_id on ties). Rankings are identical to the Python engine (parametrized test,
+plus 0 differing rankings on the 10 evaluation queries). Phrase queries are not supported by this engine (no positions).
+
+| Query | Docs matched | Python scorer (ms) | NumPy scorer (ms) | Speedup |
+|---|---|---|---|---|
+| common term `the` | 10 077 | 3.04 | 0.12 | 24.9× |
+| rare term `ahab` | 88 | 0.04 | 0.02 | 1.7× |
+| 3-term `white whale captain` | 37 | 0.24 | 0.08 | 3.1× |
+
+The speedup scales with the postings-list length: for 10 k postings, NumPy replaces 10 k Python-level `score()` calls with one array expression;
+for 88 postings the cost is dominated by Python call overhead on both sides, and on the 5-document test fixture NumPy is actually ~2.4× *slower*
+(`tests/test_benchmarks.py`: 31 µs vs 13 µs). `pytest-benchmark` tests with generous ceilings run in CI.
+
+**Memmap.** The vectorized index is 41 MB on disk vs 128 MB pickle and loads in 0.02 s vs 4.85 s (the arrays are `np.load(mmap_mode="r")`;
+at 41 MB the memmap vs read-into-RAM difference is below the noise: 0.021 s vs 0.019 s).
+
+**M3 — semantic and hybrid search** (`uv sync --extra semantic`; `findex embed index.pkl --out data/embeddings`, then `findex search index.pkl "..." --mode semantic|hybrid`;
+API `GET /search?mode=...` and a mode selector in the UI when `EMBEDDINGS_PATH` is set). Model `all-MiniLM-L6-v2`; every passage is split into ~900-character windows
+(55 523 windows × 384 dims, 85 MB, 2 min 18 s on this machine), vectors L2-normalized, `E @ q` → top 200 windows → best window per document. Hybrid = reciprocal rank fusion (k = 60)
+of the BM25 ranking (a plain-words query is turned into `a OR b OR c`; queries with operators are used as written) and the semantic ranking.
+precision@5 on the 10 original + 5 paraphrase queries (`scripts/eval_modes.py`, `docs/eval_modes.md`; paraphrases in `eval/paraphrase_queries.json`):
+
+| group | keyword | semantic | hybrid |
+|---|---|---|---|
+| 10 original queries (names, explicit `OR`) | **0.96** | 0.92 | **0.98** |
+| 5 paraphrases (no character names) | 0.00 | **0.44** | 0.36 |
+| all 15 | 0.64 | 0.76 | **0.77** |
+
+Interpretation: on distinctive keywords BM25 is already near-perfect and the neural model slightly hurts alone (`vampire OR dracula…` 0.6, `frankenstein OR monster…` 0.8) —
+hybrid keeps BM25's precision and fixes its two misses (`raskolnikov…` 0.8 → 1.0). On paraphrases keyword search returns nothing useful (0.00): there is no shared vocabulary
+with the book, and implicit AND over a whole sentence matches nothing. Semantic finds the right book for 2 of 5 (`sea captain…whale` 1.0, `detective…` 1.0) and fails on the
+two classic romances/fantasies (`young woman rejects a proud rich man` and `girl follows a talking animal` score 0.0 — passages describing those scenes are
+dominated by generic dialogue and the 6 000-character windows of other books are closer). Hybrid is slightly *below* semantic on paraphrases (0.36 vs 0.44) because the BM25 side
+of an OR-query over common words adds noise that RRF only partly outvotes. Five paraphrase queries are a tiny, noisy sample; the direction (semantic ≫ keyword on paraphrases, hybrid best overall) is
+the useful conclusion, the decimals are not. The semantic extras are optional (torch is not in the Docker image), so the deployed service is keyword-only.
+
+**Still to do for the showcase (needs you):** deployed URL (see Lab 7), GIF and 2–3 min demo video, `v1.0.0` tag and release (see below).
+
+---
+
+## Git, tags, release (not done — needs your approval)
+
+No commit, tag or push has been made. Suggested:
+
+```bash
+git add -A && git commit -m "findex: labs 1-8"
+# or per lab: git tag lab-01 … lab-08, v0.4.0 (lab 4), v1.0.0
+gh release create v1.0.0 dist/findex-1.0.0-py3-none-any.whl
+```
+
+## Reproducing the measurements
+
+```bash
+uv run python scripts/lab_measurements.py lab1 data/gutenberg     # eager vs lazy
+uv run python scripts/lab_measurements.py memory data/gutenberg   # posting representations
+uv run python scripts/lab_measurements.py merge index.pkl         # merge vs set
+uv run python scripts/lab_measurements.py formats index.pkl       # pickle vs json
+uv run python scripts/ranking_sanity.py index.pkl                 # three ranking checks
+uv run python -m findex.evaluation index.pkl eval/queries.json    # precision@5
+uv run python scripts/parallel_bench.py run data/gutenberg        # + report / io-bound
+uv run python scripts/mirror_site.py & scripts/crawl_bench.sh     # crawler
+uv run python scripts/loadtest.py http://127.0.0.1:8000 --route /search
+uv run python scripts/profile_hotspots.py index.pkl data/gutenberg
+```

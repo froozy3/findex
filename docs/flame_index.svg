@@ -1,0 +1,868 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" width="1200" height="648"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style type="text/css">
+    .func_g:hover { stroke:black; stroke-width:0.5; cursor:pointer; }
+</style>
+<svg class="func_g" x="0.0" y="288" width="1290.0668744180148" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 107.59% (1 1 3.208e-06 11.421083583000001)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 215, 125)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="0.0010645204255830237" y="264" width="1290.0654472575209" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 107.59% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 140, 79)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="0.002859068769655499" y="240" width="1290.062338591098" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 107.59% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 165, 95)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="0.002859068769655499" y="216" width="792.5045599780051" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 66.13% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 215, 125)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="0.002859068769655499" y="192" width="46.36221083997074" height="23"><g>
+    <title>/Users/vladyslav/.local/share/uv/python/cpython-3.13.12-macos-aarch64-none/lib/python3.13/collections/__init__.py:599:__init__ 3.95% (10403 10403 0.005197661 0.418977343)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 140, 79)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">__init__</text>
+</g></svg>
+<svg class="func_g" x="0.002859068769655499" y="168" width="45.774654686232154" height="23"><g>
+    <title>/Users/vladyslav/.local/share/uv/python/cpython-3.13.12-macos-aarch64-none/lib/python3.13/collections/__init__.py:673:update 3.90% (10403 10403 0.003007997 0.41377968200000004)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 190, 110)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">update</text>
+</g></svg>
+<svg class="func_g" x="0.002859068769655499" y="144" width="44.868135679381744" height="23"><g>
+    <title>~:0:&lt;built-in method _collections._count_elements&gt; 3.82% (10403 10403 0.4057604 0.4057604)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 215, 125)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;built-in method _collections._count_elements&gt;</text>
+</g></svg>
+<svg class="func_g" x="47.3650699087404" y="192" width="49.381364060946964" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:113:iter_documents 4.20% (10404 10404 0.0015936180000000002 0.445685488)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 140, 79)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents</text>
+</g></svg>
+<svg class="func_g" x="47.470058052019596" y="168" width="49.09622948976325" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:104:iter_documents_from_paths 4.17% (10404 10404 0.006718748 0.44316312)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 140, 79)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents_from_paths</text>
+</g></svg>
+<svg class="func_g" x="47.66913738886313" y="144" width="47.82434801390153" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:72:iter_text_file_chunks 4.07% (10490 10490 0.0023095290000000003 0.431911755)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 215, 125)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_text_file_chunks</text>
+</g></svg>
+<svg class="func_g" x="47.686800153223" y="120" width="16.168863169017584" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:27:read_text_file 1.43% (87 87 5.9926e-05 0.15187983300000002)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 115, 64)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">read_text_file</text>
+</g></svg>
+<svg class="func_g" x="47.686800153223" y="96" width="16.16208898923384" height="23"><g>
+    <title>/Users/vladyslav/.local/share/uv/python/cpython-3.13.12-macos-aarch64-none/lib/python3.13/pathlib/_local.py:539:read_text 1.43% (87 87 0.000194908 0.151819907)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 140, 79)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">read_text</text>
+</g></svg>
+<svg class="func_g" x="47.686800153223" y="72" width="16.13836929921578" height="23"><g>
+    <title>/Users/vladyslav/.local/share/uv/python/cpython-3.13.12-macos-aarch64-none/lib/python3.13/pathlib/_abc.py:628:read_text 1.43% (87 87 0.000193023 0.151610077)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 140, 79)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">read_text</text>
+</g></svg>
+<svg class="func_g" x="48.26508852453709" y="48" width="15.53826114175882" height="23"><g>
+    <title>~:0:&lt;method 'read' of '_io.TextIOWrapper' objects&gt; 1.38% (87 87 0.128965628 0.146301378)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 190, 110)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'read' of '_io.TextIOWrapper' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="48.26508852453709" y="24" width="1" height="23"><g>
+    <title>&lt;frozen codecs&gt;:322:decode 0.16% (87 87 0.00014584100000000002 0.01733575)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 240, 141)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">decode</text>
+</g></svg>
+<svg class="func_g" x="48.26508852453709" y="0" width="1" height="23"><g>
+    <title>~:0:&lt;built-in method _codecs.utf_8_decode&gt; 0.16% (87 87 0.017189909 0.017189909)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 115, 64)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;built-in method _codecs.utf_8_decode&gt;</text>
+</g></svg>
+<svg class="func_g" x="64.85566332224059" y="120" width="2.0756298899518892" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:38:strip_gutenberg_boilerplate 0.26% (87 87 0.006973425 0.027207751000000002)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 215, 125)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">strip_gutenberg_boilerplate</text>
+</g></svg>
+<svg class="func_g" x="64.85566332224059" y="96" width="1.2846669096243968" height="23"><g>
+    <title>~:0:&lt;method 'find' of 'str' objects&gt; 0.19% (174 174 0.020210705000000002 0.020210705000000002)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 240, 141)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'find' of 'str' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="68.03803407812205" y="120" width="21.29515425579928" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:55:split_into_chunks 1.86% (10490 10490 0.067787237 0.197228219)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 215, 125)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">split_into_chunks</text>
+</g></svg>
+<svg class="func_g" x="69.2353860112728" y="96" width="1" height="23"><g>
+    <title>~:0:&lt;method 'append' of 'list' objects&gt; 0.13% (258997 258997 0.013949714 0.013949714)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 115, 64)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'append' of 'list' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="71.97639746488039" y="96" width="7.344776068314985" height="23"><g>
+    <title>~:0:&lt;method 'split' of 'str' objects&gt; 0.70% (87 87 0.07381986700000001 0.07381986700000001)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 165, 95)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'split' of 'str' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="80.32117353319536" y="96" width="1.3491817986725216" height="23"><g>
+    <title>~:0:&lt;method 'strip' of 'str' objects&gt; 0.20% (266531 266531 0.020781419000000002 0.020781419000000002)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 165, 95)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'strip' of 'str' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="90.33318833392134" y="120" width="4.899222332305533" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/tokenize.py:19:normalize_text 0.49% (87 87 3.3248000000000004e-05 0.052185919000000004)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 215, 125)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">normalize_text</text>
+</g></svg>
+<svg class="func_g" x="90.33318833392134" y="96" width="4.895463898079157" height="23"><g>
+    <title>~:0:&lt;built-in method unicodedata.normalize&gt; 0.49% (6001 6001 0.052152671000000005 0.052152671000000005)</title>
+    <rect height="100%" width="100%" fill="rgb(99, 206, 42)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;built-in method unicodedata.normalize&gt;</text>
+</g></svg>
+<svg class="func_g" x="97.74643396968737" y="192" width="469.10548354318644" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/tokenize.py:29:tokenize 39.18% (12063626 12063626 2.766731558 4.1586645330000005)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 90, 49)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">tokenize</text>
+</g></svg>
+<svg class="func_g" x="97.74643396968737" y="168" width="3.5858856027503645" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/tokenize.py:19:normalize_text 0.38% (10403 10403 0.001552133 0.040567831000000006)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 215, 125)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">normalize_text</text>
+</g></svg>
+<svg class="func_g" x="97.74643396968737" y="144" width="3.4104287394476724" height="23"><g>
+    <title>~:0:&lt;built-in method unicodedata.normalize&gt; 0.37% (4489 4489 0.03901569800000001 0.03901569800000001)</title>
+    <rect height="100%" width="100%" fill="rgb(99, 206, 42)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;built-in method unicodedata.normalize&gt;</text>
+</g></svg>
+<svg class="func_g" x="102.33231957243773" y="168" width="67.76128600814913" height="23"><g>
+    <title>~:0:&lt;method 'casefold' of 'str' objects&gt; 5.73% (12053223 12053223 0.608278634 0.608278634)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 240, 141)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'casefold' of 'str' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="171.56178758718082" y="168" width="82.53211191612067" height="23"><g>
+    <title>~:0:&lt;method 'group' of 're.Match' objects&gt; 6.96% (12053223 12053223 0.738944861 0.738944861)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 165, 95)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'group' of 're.Match' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="567.9399230680064" y="192" width="34.86148202824734" height="23"><g>
+    <title>~:0:&lt;method 'append' of 'list' objects&gt; 2.99% (4929471 4929471 0.31723917 0.31723917)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 115, 64)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'append' of 'list' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="793.5074190467748" y="216" width="471.27250766330013" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:126:merge 39.36% (1 1 0.07432970600000001 4.177834542)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 165, 95)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">merge</text>
+</g></svg>
+<svg class="func_g" x="793.507824077749" y="192" width="4.777786178462075" height="23"><g>
+    <title>~:0:&lt;built-in method builtins.sorted&gt; 0.48% (1 1 0.051111666 0.051111666)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 190, 110)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;built-in method builtins.sorted&gt;</text>
+</g></svg>
+<svg class="func_g" x="799.285610256211" y="192" width="456.8480883677905" height="23"><g>
+    <title>~:0:&lt;method 'extend' of 'list' objects&gt; 38.15% (141254 141254 0.24096330000000002 4.05023271)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 190, 110)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'extend' of 'list' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="799.285610256211" y="168" width="429.6090149191455" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:141:&lt;genexpr&gt; 35.88% (5049919 5049919 3.005818547 3.80926941)</title>
+    <rect height="100%" width="100%" fill="rgb(85, 218, 84)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;genexpr&gt;</text>
+</g></svg>
+<svg class="func_g" x="2.0662547197762473" y="336" width="6.662833002053445" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:55:split_into_chunks 0.64% (10490 10490 0.067787237 0.197228219)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 215, 125)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">split_into_chunks</text>
+</g></svg>
+<svg class="func_g" x="2.0662547197762473" y="360" width="6.662833002053445" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:72:iter_text_file_chunks 0.64% (10490 10490 0.067787237 0.197228219)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_text_file_chunks</text>
+</g></svg>
+<svg class="func_g" x="2.0662547197762473" y="384" width="6.662833002053445" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:104:iter_documents_from_paths 0.02% (10490 10490 0.0023095290000000003 0.431911755)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents_from_paths</text>
+</g></svg>
+<svg class="func_g" x="2.0662547197762473" y="408" width="6.662833002053445" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:113:iter_documents 0.06% (10404 10404 0.006718748 0.44316312)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents</text>
+</g></svg>
+<svg class="func_g" x="2.0662547197762473" y="432" width="6.662833002053445" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 0.02% (10404 10404 0.0015936180000000002 0.445685488)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="2.0662547197762473" y="456" width="6.662833002053445" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="2.0662547197762473" y="480" width="6.662833002053445" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="2.0662547197762473" y="504" width="6.662833002053445" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="10.932398911991735" y="336" width="188.58341142503568" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 215, 125)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="10.932398911991735" y="360" width="188.58341142503568" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="10.932398911991735" y="384" width="188.58341142503568" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="10.932398911991735" y="408" width="188.58341142503568" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="200.5158103370274" y="336" width="7.4024095003271775" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:126:merge 0.70% (1 1 0.07432970600000001 4.177834542)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 165, 95)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">merge</text>
+</g></svg>
+<svg class="func_g" x="200.5158103370274" y="360" width="7.4024095003271775" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 0.70% (1 1 0.07432970600000001 4.177834542)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="200.5158103370274" y="384" width="7.4024095003271775" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="200.5158103370274" y="408" width="7.4024095003271775" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="208.9182198373546" y="336" width="338.78498873078325" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:141:&lt;genexpr&gt; 28.32% (5049919 5049919 3.005818547 3.80926941)</title>
+    <rect height="100%" width="100%" fill="rgb(182, 182, 255)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;genexpr&gt;</text>
+</g></svg>
+<svg class="func_g" x="208.9182198373546" y="360" width="338.78498873078325" height="23"><g>
+    <title>~:0:&lt;method 'extend' of 'list' objects&gt; 28.32% (5049919 5049919 3.005818547 3.80926941)</title>
+    <rect height="100%" width="100%" fill="rgb(204, 204, 204)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'extend' of 'list' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="208.91829668305746" y="384" width="338.78491188508036" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:126:merge 2.27% (141254 141254 0.24096330000000002 4.05023271)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">merge</text>
+</g></svg>
+<svg class="func_g" x="208.91829668305746" y="408" width="338.78491188508036" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 0.70% (1 1 0.07432970600000001 4.177834542)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="208.91829668305746" y="432" width="338.78491188508036" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="208.91829668305746" y="456" width="338.78491188508036" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="548.7032085681378" y="336" width="24.285270949792707" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 165, 95)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="548.7032085681378" y="360" width="24.28527094979271" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="548.7032085681378" y="384" width="24.285270949792718" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="574.1689194039453" y="336" width="311.7580180095723" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/tokenize.py:29:tokenize 26.06% (12063626 12063626 2.766731558 4.1586645330000005)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 90, 49)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">tokenize</text>
+</g></svg>
+<svg class="func_g" x="574.1689194039453" y="360" width="311.7580180095723" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 26.06% (12063626 12063626 2.766731558 4.1586645330000005)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="574.1689194039453" y="384" width="311.7580180095723" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="574.1689194039453" y="408" width="311.7580180095723" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="574.1689194039453" y="432" width="311.7580180095723" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="887.5966430731029" y="336" width="1" height="23"><g>
+    <title>~:0:&lt;built-in method _codecs.utf_8_decode&gt; 0.16% (87 87 0.017189909 0.017189909)</title>
+    <rect height="100%" width="100%" fill="rgb(182, 182, 255)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;built-in method _codecs.utf_8_decode&gt;</text>
+</g></svg>
+<svg class="func_g" x="887.5966430731029" y="360" width="1" height="23"><g>
+    <title>&lt;frozen codecs&gt;:322:decode 0.16% (87 87 0.017189909 0.017189909)</title>
+    <rect height="100%" width="100%" fill="rgb(190, 190, 190)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">decode</text>
+</g></svg>
+<svg class="func_g" x="887.5966430731029" y="384" width="1" height="23"><g>
+    <title>~:0:&lt;method 'read' of '_io.TextIOWrapper' objects&gt; 0.00% (87 87 0.00014584100000000002 0.01733575)</title>
+    <rect height="100%" width="100%" fill="rgb(204, 204, 204)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'read' of '_io.TextIOWrapper' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="887.5966430731029" y="408" width="1" height="23"><g>
+    <title>/Users/vladyslav/.local/share/uv/python/cpython-3.13.12-macos-aarch64-none/lib/python3.13/pathlib/_abc.py:628:read_text 1.21% (87 87 0.128965628 0.146301378)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">read_text</text>
+</g></svg>
+<svg class="func_g" x="887.5966430731029" y="432" width="1" height="23"><g>
+    <title>/Users/vladyslav/.local/share/uv/python/cpython-3.13.12-macos-aarch64-none/lib/python3.13/pathlib/_local.py:539:read_text 0.00% (87 87 0.000193023 0.151610077)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">read_text</text>
+</g></svg>
+<svg class="func_g" x="887.5966430731029" y="456" width="1" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:27:read_text_file 0.00% (87 87 0.000194908 0.151819907)</title>
+    <rect height="100%" width="100%" fill="rgb(225, 225, 225)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">read_text_file</text>
+</g></svg>
+<svg class="func_g" x="887.5966430731029" y="480" width="1" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:72:iter_text_file_chunks 0.00% (87 87 5.9926e-05 0.15187983300000002)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_text_file_chunks</text>
+</g></svg>
+<svg class="func_g" x="887.5966430731029" y="504" width="1" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:104:iter_documents_from_paths 0.02% (10490 10490 0.0023095290000000003 0.431911755)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents_from_paths</text>
+</g></svg>
+<svg class="func_g" x="887.5966430731029" y="528" width="1" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:113:iter_documents 0.06% (10404 10404 0.006718748 0.44316312)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents</text>
+</g></svg>
+<svg class="func_g" x="887.5966430731029" y="552" width="1" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 0.02% (10404 10404 0.0015936180000000002 0.445685488)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="887.5966430731029" y="576" width="1" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="887.5966430731029" y="600" width="1" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="887.5966430731029" y="624" width="1" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="889.5398319065331" y="336" width="44.868135679381744" height="23"><g>
+    <title>~:0:&lt;built-in method _collections._count_elements&gt; 3.82% (10403 10403 0.4057604 0.4057604)</title>
+    <rect height="100%" width="100%" fill="rgb(214, 214, 255)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;built-in method _collections._count_elements&gt;</text>
+</g></svg>
+<svg class="func_g" x="889.5398319065331" y="360" width="44.868135679381744" height="23"><g>
+    <title>/Users/vladyslav/.local/share/uv/python/cpython-3.13.12-macos-aarch64-none/lib/python3.13/collections/__init__.py:673:update 3.82% (10403 10403 0.4057604 0.4057604)</title>
+    <rect height="100%" width="100%" fill="rgb(204, 204, 204)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">update</text>
+</g></svg>
+<svg class="func_g" x="889.5398319065331" y="384" width="44.868135679381744" height="23"><g>
+    <title>/Users/vladyslav/.local/share/uv/python/cpython-3.13.12-macos-aarch64-none/lib/python3.13/collections/__init__.py:599:__init__ 0.03% (10403 10403 0.003007997 0.41377968200000004)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">__init__</text>
+</g></svg>
+<svg class="func_g" x="889.5398319065331" y="408" width="44.868135679381744" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 0.05% (10403 10403 0.005197661 0.418977343)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="889.5398319065331" y="432" width="44.868135679381744" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="889.5398319065331" y="456" width="44.868135679381744" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="889.5398319065331" y="480" width="44.868135679381744" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="936.1586238234892" y="336" width="1" height="23"><g>
+    <title>~:0:&lt;built-in method builtins.len&gt; 0.11% (269824 269831 0.011398415 0.011399246)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 140, 79)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;built-in method builtins.len&gt;</text>
+</g></svg>
+<svg class="func_g" x="937.4473542713625" y="336" width="4.780949896541165" height="23"><g>
+    <title>~:0:&lt;built-in method builtins.sorted&gt; 0.48% (2 2 0.051139653 0.051355666)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 190, 110)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;built-in method builtins.sorted&gt;</text>
+</g></svg>
+<svg class="func_g" x="937.4748206034076" y="360" width="4.753483564496011" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:126:merge 0.48% (1 1 0.051111666 0.051111666)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">merge</text>
+</g></svg>
+<svg class="func_g" x="937.4748206034076" y="384" width="4.753483564496011" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 0.70% (1 1 0.07432970600000001 4.177834542)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="937.4748206034076" y="408" width="4.753483564496012" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="937.4748206034076" y="432" width="4.753483564496013" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="943.2613219357136" y="336" width="9.305892637526828" height="23"><g>
+    <title>~:0:&lt;built-in method unicodedata.normalize&gt; 0.86% (10490 10490 0.091168369 0.091168369)</title>
+    <rect height="100%" width="100%" fill="rgb(166, 166, 255)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;built-in method unicodedata.normalize&gt;</text>
+</g></svg>
+<svg class="func_g" x="943.2613219357136" y="360" width="9.305892637526828" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/tokenize.py:19:normalize_text 0.86% (10490 10490 0.091168369 0.091168369)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">normalize_text</text>
+</g></svg>
+<svg class="func_g" x="943.2613219357136" y="384" width="4.7983906678131225" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:72:iter_text_file_chunks 0.00% (87 87 3.3248000000000004e-05 0.052185919000000004)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_text_file_chunks</text>
+</g></svg>
+<svg class="func_g" x="943.2613219357136" y="408" width="4.7983906678131225" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:104:iter_documents_from_paths 0.02% (10490 10490 0.0023095290000000003 0.431911755)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents_from_paths</text>
+</g></svg>
+<svg class="func_g" x="943.2613219357136" y="432" width="4.7983906678131225" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:113:iter_documents 0.06% (10404 10404 0.006718748 0.44316312)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents</text>
+</g></svg>
+<svg class="func_g" x="943.2613219357136" y="456" width="4.7983906678131225" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 0.02% (10404 10404 0.0015936180000000002 0.445685488)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="943.2613219357136" y="480" width="4.7983906678131225" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="943.2613219357136" y="504" width="4.7983906678131225" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="943.2613219357136" y="528" width="4.798390667813122" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="949.0597126035266" y="384" width="3.5075019697137053" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/tokenize.py:29:tokenize 0.01% (10403 10403 0.001552133 0.040567831000000006)</title>
+    <rect height="100%" width="100%" fill="rgb(232, 232, 232)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">tokenize</text>
+</g></svg>
+<svg class="func_g" x="949.0597126035266" y="408" width="3.5075019697137053" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 26.06% (12063626 12063626 2.766731558 4.1586645330000005)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="949.0597126035266" y="432" width="3.5075019697137053" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="949.0597126035266" y="456" width="3.5075019697137053" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="949.0597126035266" y="480" width="3.5075019697137053" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="953.6204299685324" y="336" width="36.43982703126808" height="23"><g>
+    <title>~:0:&lt;method 'append' of 'list' objects&gt; 3.12% (5188657 5188657 0.331201584 0.331201584)</title>
+    <rect height="100%" width="100%" fill="rgb(166, 166, 255)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'append' of 'list' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="953.6218656072078" y="360" width="1" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:55:split_into_chunks 0.13% (258997 258997 0.013949714 0.013949714)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">split_into_chunks</text>
+</g></svg>
+<svg class="func_g" x="953.6218656072078" y="384" width="1" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:72:iter_text_file_chunks 0.64% (10490 10490 0.067787237 0.197228219)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_text_file_chunks</text>
+</g></svg>
+<svg class="func_g" x="953.6218656072078" y="408" width="1" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:104:iter_documents_from_paths 0.02% (10490 10490 0.0023095290000000003 0.431911755)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents_from_paths</text>
+</g></svg>
+<svg class="func_g" x="953.6218656072078" y="432" width="1" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:113:iter_documents 0.06% (10404 10404 0.006718748 0.44316312)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents</text>
+</g></svg>
+<svg class="func_g" x="953.6218656072078" y="456" width="1" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 0.02% (10404 10404 0.0015936180000000002 0.445685488)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="953.6218656072078" y="480" width="1" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="953.6218656072078" y="504" width="1" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="953.6218656072078" y="528" width="1" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="955.1987749715535" y="360" width="34.86148202824734" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 2.99% (4929471 4929471 0.31723917 0.31723917)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="955.1987749715535" y="384" width="34.86148202824734" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="955.1987749715535" y="408" width="34.86148202824734" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="955.1987749715535" y="432" width="34.86148202824734" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="991.0602569998007" y="336" width="67.76128600814913" height="23"><g>
+    <title>~:0:&lt;method 'casefold' of 'str' objects&gt; 5.73% (12053223 12053223 0.608278634 0.608278634)</title>
+    <rect height="100%" width="100%" fill="rgb(230, 230, 255)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'casefold' of 'str' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="991.0602569998007" y="360" width="67.76128600814913" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/tokenize.py:29:tokenize 5.73% (12053223 12053223 0.608278634 0.608278634)</title>
+    <rect height="100%" width="100%" fill="rgb(232, 232, 232)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">tokenize</text>
+</g></svg>
+<svg class="func_g" x="991.0602569998007" y="384" width="67.76128600814913" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 26.06% (12063626 12063626 2.766731558 4.1586645330000005)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="991.0602569998007" y="408" width="67.76128600814913" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="991.0602569998007" y="432" width="67.76128600814913" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="991.0602569998007" y="456" width="67.76128600814913" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="1059.822541624647" y="336" width="26.239176995497466" height="23"><g>
+    <title>~:0:&lt;method 'extend' of 'list' objects&gt; 2.27% (141262 141262 0.240964216 4.050233626)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 190, 110)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'extend' of 'list' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="1059.822547785054" y="360" width="26.239170835090825" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:126:merge 2.27% (141254 141254 0.24096330000000002 4.05023271)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">merge</text>
+</g></svg>
+<svg class="func_g" x="1059.822547785054" y="384" width="26.239170835090825" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 0.70% (1 1 0.07432970600000001 4.177834542)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="1059.822547785054" y="408" width="26.239170835090825" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="1059.822547785054" y="432" width="26.239170835090825" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="1087.0617186201448" y="336" width="1.2846669096243968" height="23"><g>
+    <title>~:0:&lt;method 'find' of 'str' objects&gt; 0.19% (174 174 0.020210705000000002 0.020210705000000002)</title>
+    <rect height="100%" width="100%" fill="rgb(230, 230, 255)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'find' of 'str' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="1087.0617186201448" y="360" width="1.2846669096243968" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:38:strip_gutenberg_boilerplate 0.19% (174 174 0.020210705000000002 0.020210705000000002)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">strip_gutenberg_boilerplate</text>
+</g></svg>
+<svg class="func_g" x="1087.0617186201448" y="384" width="1.2846669096243968" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:72:iter_text_file_chunks 0.07% (87 87 0.006973425 0.027207751000000002)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_text_file_chunks</text>
+</g></svg>
+<svg class="func_g" x="1087.0617186201448" y="408" width="1.2846669096243968" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:104:iter_documents_from_paths 0.02% (10490 10490 0.0023095290000000003 0.431911755)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents_from_paths</text>
+</g></svg>
+<svg class="func_g" x="1087.0617186201448" y="432" width="1.2846669096243968" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:113:iter_documents 0.06% (10404 10404 0.006718748 0.44316312)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents</text>
+</g></svg>
+<svg class="func_g" x="1087.0617186201448" y="456" width="1.2846669096243968" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 0.02% (10404 10404 0.0015936180000000002 0.445685488)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="1087.0617186201448" y="480" width="1.2846669096243968" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="1087.0617186201448" y="504" width="1.2846669096243968" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="1087.0617186201448" y="528" width="1.2846669096243968" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="1089.8146900743413" y="336" width="82.53211191612067" height="23"><g>
+    <title>~:0:&lt;method 'group' of 're.Match' objects&gt; 6.96% (12053223 12053223 0.738944861 0.738944861)</title>
+    <rect height="100%" width="100%" fill="rgb(198, 198, 255)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'group' of 're.Match' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="1089.8146900743413" y="360" width="82.53211191612067" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/tokenize.py:29:tokenize 6.96% (12053223 12053223 0.738944861 0.738944861)</title>
+    <rect height="100%" width="100%" fill="rgb(232, 232, 232)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">tokenize</text>
+</g></svg>
+<svg class="func_g" x="1089.8146900743413" y="384" width="82.53211191612067" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 26.06% (12063626 12063626 2.766731558 4.1586645330000005)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="1089.8146900743413" y="408" width="82.53211191612067" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="1089.8146900743413" y="432" width="82.53211191612067" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="1089.8146900743413" y="456" width="82.53211191612067" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="1174.639748920429" y="336" width="13.578586089427834" height="23"><g>
+    <title>~:0:&lt;method 'read' of '_io.TextIOWrapper' objects&gt; 1.21% (87 87 0.128965628 0.146301378)</title>
+    <rect height="100%" width="100%" fill="rgb(255, 190, 110)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'read' of '_io.TextIOWrapper' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="1174.639748920429" y="360" width="13.578586089427834" height="23"><g>
+    <title>/Users/vladyslav/.local/share/uv/python/cpython-3.13.12-macos-aarch64-none/lib/python3.13/pathlib/_abc.py:628:read_text 1.21% (87 87 0.128965628 0.146301378)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">read_text</text>
+</g></svg>
+<svg class="func_g" x="1174.639748920429" y="384" width="13.578586089427834" height="23"><g>
+    <title>/Users/vladyslav/.local/share/uv/python/cpython-3.13.12-macos-aarch64-none/lib/python3.13/pathlib/_local.py:539:read_text 0.00% (87 87 0.000193023 0.151610077)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">read_text</text>
+</g></svg>
+<svg class="func_g" x="1174.639748920429" y="408" width="13.578586089427834" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:27:read_text_file 0.00% (87 87 0.000194908 0.151819907)</title>
+    <rect height="100%" width="100%" fill="rgb(225, 225, 225)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">read_text_file</text>
+</g></svg>
+<svg class="func_g" x="1174.639748920429" y="432" width="13.578586089427834" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:72:iter_text_file_chunks 0.00% (87 87 5.9926e-05 0.15187983300000002)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_text_file_chunks</text>
+</g></svg>
+<svg class="func_g" x="1174.639748920429" y="456" width="13.578586089427834" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:104:iter_documents_from_paths 0.02% (10490 10490 0.0023095290000000003 0.431911755)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents_from_paths</text>
+</g></svg>
+<svg class="func_g" x="1174.639748920429" y="480" width="13.578586089427834" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:113:iter_documents 0.06% (10404 10404 0.006718748 0.44316312)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents</text>
+</g></svg>
+<svg class="func_g" x="1174.639748920429" y="504" width="13.578586089427834" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 0.02% (10404 10404 0.0015936180000000002 0.445685488)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="1174.639748920429" y="528" width="13.578586089427834" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="1174.639748920429" y="552" width="13.578586089427834" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="1174.639748920429" y="576" width="13.578586089427834" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="1189.2256262456483" y="336" width="7.3533956655297175" height="23"><g>
+    <title>~:0:&lt;method 'split' of 'str' objects&gt; 0.70% (264 264 0.07389611800000001 0.07389611800000001)</title>
+    <rect height="100%" width="100%" fill="rgb(198, 198, 255)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'split' of 'str' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="1189.234245842863" y="360" width="7.344776068314985" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:55:split_into_chunks 0.70% (87 87 0.07381986700000001 0.07381986700000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">split_into_chunks</text>
+</g></svg>
+<svg class="func_g" x="1189.234245842863" y="384" width="7.344776068314985" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:72:iter_text_file_chunks 0.64% (10490 10490 0.067787237 0.197228219)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_text_file_chunks</text>
+</g></svg>
+<svg class="func_g" x="1189.234245842863" y="408" width="7.344776068314985" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:104:iter_documents_from_paths 0.02% (10490 10490 0.0023095290000000003 0.431911755)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents_from_paths</text>
+</g></svg>
+<svg class="func_g" x="1189.234245842863" y="432" width="7.344776068314985" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:113:iter_documents 0.06% (10404 10404 0.006718748 0.44316312)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents</text>
+</g></svg>
+<svg class="func_g" x="1189.234245842863" y="456" width="7.344776068314985" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 0.02% (10404 10404 0.0015936180000000002 0.445685488)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="1189.234245842863" y="480" width="7.344776068314985" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="1189.234245842863" y="504" width="7.344776068314985" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="1189.234245842863" y="528" width="7.344776068314985" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+<svg class="func_g" x="1197.649414779741" y="336" width="1.3503546137320335" height="23"><g>
+    <title>~:0:&lt;method 'strip' of 'str' objects&gt; 0.20% (266617 266617 0.020791794000000002 0.020791794000000002)</title>
+    <rect height="100%" width="100%" fill="rgb(198, 198, 255)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;method 'strip' of 'str' objects&gt;</text>
+</g></svg>
+<svg class="func_g" x="1197.6505875948005" y="360" width="1.3491817986725216" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:55:split_into_chunks 0.20% (266531 266531 0.020781419000000002 0.020781419000000002)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">split_into_chunks</text>
+</g></svg>
+<svg class="func_g" x="1197.6505875948005" y="384" width="1.3491817986725216" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:72:iter_text_file_chunks 0.64% (10490 10490 0.067787237 0.197228219)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_text_file_chunks</text>
+</g></svg>
+<svg class="func_g" x="1197.6505875948005" y="408" width="1.3491817986725216" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:104:iter_documents_from_paths 0.02% (10490 10490 0.0023095290000000003 0.431911755)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents_from_paths</text>
+</g></svg>
+<svg class="func_g" x="1197.6505875948005" y="432" width="1.3491817986725216" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/corpus.py:113:iter_documents 0.06% (10404 10404 0.006718748 0.44316312)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">iter_documents</text>
+</g></svg>
+<svg class="func_g" x="1197.6505875948005" y="456" width="1.3491817986725216" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:97:build_partial_from_documents 0.02% (10404 10404 0.0015936180000000002 0.445685488)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_partial_from_documents</text>
+</g></svg>
+<svg class="func_g" x="1197.6505875948005" y="480" width="1.3491817986725216" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/index.py:150:build_index 15.80% (1 1 1.677099793 7.019529416)</title>
+    <rect height="100%" width="100%" fill="rgb(211, 211, 211)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">build_index</text>
+</g></svg>
+<svg class="func_g" x="1197.6505875948005" y="504" width="1.3491817986725216" height="23"><g>
+    <title>/Users/vladyslav/studying/python_programming/findex/src/findex/timing.py:12:wrapper 2.11% (1 1 0.2236795 11.421043458000002)</title>
+    <rect height="100%" width="100%" fill="rgb(218, 218, 218)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">wrapper</text>
+</g></svg>
+<svg class="func_g" x="1197.6505875948005" y="528" width="1.3491817986725216" height="23"><g>
+    <title>&lt;stdin&gt;:7:&lt;lambda&gt; 0.00% (1 1 1.0833000000000001e-05 11.421070958000001)</title>
+    <rect height="100%" width="100%" fill="rgb(197, 197, 197)" rx="2" ry="2" />
+    <text alignment-baseline="central" x="4.0" y="12.0" font-size="12px" fill="rgb(0,0,0)">&lt;lambda&gt;</text>
+</g></svg>
+</svg>
