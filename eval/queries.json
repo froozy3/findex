@@ -1,0 +1,12 @@
+[
+  {"query": "white whale Ahab", "relevant_books": ["pg2701"]},
+  {"query": "Elizabeth Darcy proposal", "relevant_books": ["pg1342"]},
+  {"query": "Sherlock Holmes Watson", "relevant_books": ["pg1661", "pg108", "pg244", "pg2852"]},
+  {"query": "vampire OR dracula OR transylvania", "relevant_books": ["pg345"]},
+  {"query": "frankenstein OR monster OR creature", "relevant_books": ["pg84"]},
+  {"query": "alice (rabbit OR hatter OR queen)", "relevant_books": ["pg11"]},
+  {"query": "raskolnikov murder pawnbroker", "relevant_books": ["pg2554"]},
+  {"query": "treasure OR pirates OR silver", "relevant_books": ["pg120"]},
+  {"query": "natural selection variation species", "relevant_books": ["pg1228"]},
+  {"query": "odysseus OR suitors OR penelope", "relevant_books": ["pg1727"]}
+]

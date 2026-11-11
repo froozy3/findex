@@ -89,3 +89,37 @@ so it must never be used on a file you did not build yourself — see the commen
 A plain instance carries a ~100-byte `__dict__`; `slots=True` removes it (−39 %). Each 5 M postings then still costs an
 object header + two `int` pointers (~56 B); `array('I')` stores 8 bytes per posting with no per-element objects (−81 %).
 
+## Lab 3 — object model and ranking
+
+`Index` is a `Mapping` (`len`, `in`, `[]`, iteration, `repr`, `cached_property avg_doc_length`, `df`), `open_index()` is a
+context manager. `Scorer` is a `Protocol` with `TfIdf` and `BM25(k1=1.5, b=0.75)`; top-k via `heapq.nlargest`.
+Query language: recursive-descent parser → `Term / Phrase / And / Or / Not` dataclass tree (`&`, `|`, `~` overloaded,
+tree-equality tests): `parse('a OR b c') == Or(Term('a'), And(Term('b'), Term('c')))` — `OR` binds looser than the implicit AND.
+`@timed` (with `functools.wraps`) logs elapsed ms; `lru_cache` caches query → matching doc ids; snippets highlight matches.
+
+Sanity checks on the real corpus (`scripts/ranking_sanity.py`):
+
+1. Rare beats common: BM25 `score(tf=1)` for `the` (df=10 077) = 0.033, for `ahab` (df=88) = 4.901.
+2. Saturation (average-length passage, `whale`): tf 1→2 adds 1.728, tf 20→21 adds 0.031; tf 40 is only 3 % above tf 20.
+3. Length normalization: the same single match scores 4.241 in a 1 032-token passage and 2.549 in a 2 657-token passage.
+
+**precision@5** (10 hand-written queries; a hit = the passage comes from a book that is the right answer; `python -m findex.evaluation`):
+
+| query | BM25 | TF-IDF |
+|---|---|---|
+| white whale Ahab | 1.0 | 1.0 |
+| Elizabeth Darcy proposal | 1.0 | 1.0 |
+| Sherlock Holmes Watson | 1.0 | 1.0 |
+| vampire OR dracula OR transylvania | 1.0 | 1.0 |
+| frankenstein OR monster OR creature | 1.0 | 1.0 |
+| alice (rabbit OR hatter OR queen) | 1.0 | 1.0 |
+| raskolnikov murder pawnbroker | 0.8 | 0.8 |
+| treasure OR pirates OR silver | 0.8 | 0.8 |
+| natural selection variation species | 1.0 | 1.0 |
+| odysseus OR suitors OR penelope | 1.0 | 1.0 |
+| **mean** | **0.96** | **0.96** |
+
+BM25 and TF-IDF tie on this set: the queries are distinctive names, which both rank well. The set is small and labels are at book
+level; it cannot separate the scorers. (My first version of the queries used 5 plain words and scored P@5 = 0 for four of them — implicit
+AND over five words rarely co-occurs in one 1 000-word passage — which is why the final queries use explicit `OR`.)
+
