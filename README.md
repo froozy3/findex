@@ -123,3 +123,14 @@ BM25 and TF-IDF tie on this set: the queries are distinctive names, which both r
 level; it cannot separate the scorers. (My first version of the queries used 5 plain words and scored P@5 = 0 for four of them — implicit
 AND over five words rarely co-occurs in one 1 000-word passage — which is why the final queries use explicit `OR`.)
 
+## Lab 4 — a real tool
+
+`pyright --strict`: 0 errors (one test file, `tests/test_web.py`, is checked in basic mode because Starlette's `TestClient`
+is only partially typed). `ruff check` + `ruff format --check` clean. **207 tests** (pytest, parametrized, 3+ Hypothesis properties on
+the merges, CLI via `CliRunner`), **93 % coverage**; uncovered: `__main__`, the `argparse` entry of `stats`/`evaluation`, a few
+defensive `except` branches in the crawler/web layers and the `--limit` progress path.
+
+CLI: `findex index|search|stats|crawl|serve|vectorize|embed`; `-v/-vv` set the log level, diagnostics go to stderr through `logging`;
+`search --json` emits clean JSON lines on stdout; expected errors exit with code 1 and one line. `uv build` produces the wheel
+(`dist/findex-1.0.0-py3-none-any.whl`); `uv tool install .` puts `findex` on PATH. CI: `.github/workflows/ci.yml` (ruff, pyright, pytest).
+
