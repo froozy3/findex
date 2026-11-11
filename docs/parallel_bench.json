@@ -1,0 +1,252 @@
+{
+  "machine": {
+    "machine": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "cpus": 10,
+    "python": "3.13.12"
+  },
+  "results": [
+    {
+      "executor": "serial",
+      "workers": 1,
+      "wall": 7.075845208000828,
+      "cpu": 6.9572069999999995,
+      "parent_rss_mb": 986.359375,
+      "child_rss_mb": 0.0,
+      "merge": 3.4925691250000455
+    },
+    {
+      "executor": "serial",
+      "workers": 1,
+      "wall": 6.7015509590000875,
+      "cpu": 6.710255,
+      "parent_rss_mb": 979.1875,
+      "child_rss_mb": 0.0,
+      "merge": 3.2927511670004606
+    },
+    {
+      "executor": "serial",
+      "workers": 1,
+      "wall": 6.751995208000153,
+      "cpu": 6.7575389999999995,
+      "parent_rss_mb": 986.15625,
+      "child_rss_mb": 0.0,
+      "merge": 3.326703207999344
+    },
+    {
+      "executor": "threads",
+      "workers": 2,
+      "wall": 8.052339584000038,
+      "cpu": 7.906979,
+      "parent_rss_mb": 973.546875,
+      "child_rss_mb": 0.0,
+      "merge": 4.131794707999688
+    },
+    {
+      "executor": "threads",
+      "workers": 2,
+      "wall": 8.042478332999963,
+      "cpu": 7.915387999999999,
+      "parent_rss_mb": 997.96875,
+      "child_rss_mb": 0.0,
+      "merge": 3.9654827909998858
+    },
+    {
+      "executor": "threads",
+      "workers": 2,
+      "wall": 8.810221875000025,
+      "cpu": 8.257629999999999,
+      "parent_rss_mb": 958.875,
+      "child_rss_mb": 0.0,
+      "merge": 3.8918653339997036
+    },
+    {
+      "executor": "threads",
+      "workers": 4,
+      "wall": 8.442975208000462,
+      "cpu": 8.284040000000001,
+      "parent_rss_mb": 971.9375,
+      "child_rss_mb": 0.0,
+      "merge": 4.1402917909999815
+    },
+    {
+      "executor": "threads",
+      "workers": 4,
+      "wall": 7.811746082999889,
+      "cpu": 7.800809,
+      "parent_rss_mb": 996.71875,
+      "child_rss_mb": 0.0,
+      "merge": 3.85132779200012
+    },
+    {
+      "executor": "threads",
+      "workers": 4,
+      "wall": 7.676831291000781,
+      "cpu": 7.660873,
+      "parent_rss_mb": 979.984375,
+      "child_rss_mb": 0.0,
+      "merge": 3.7186867500004155
+    },
+    {
+      "executor": "threads",
+      "workers": 8,
+      "wall": 19.983762040999864,
+      "cpu": 18.580066,
+      "parent_rss_mb": 1000.84375,
+      "child_rss_mb": 0.0,
+      "merge": 13.32821879200037
+    },
+    {
+      "executor": "threads",
+      "workers": 8,
+      "wall": 15.702121457999965,
+      "cpu": 14.896246,
+      "parent_rss_mb": 1009.234375,
+      "child_rss_mb": 0.0,
+      "merge": 4.496322833000704
+    },
+    {
+      "executor": "threads",
+      "workers": 8,
+      "wall": 8.532797707999634,
+      "cpu": 8.406225000000001,
+      "parent_rss_mb": 1001.234375,
+      "child_rss_mb": 0.0,
+      "merge": 4.3493356660001155
+    },
+    {
+      "executor": "threads",
+      "workers": 10,
+      "wall": 8.124737374999313,
+      "cpu": 8.074145,
+      "parent_rss_mb": 1000.0,
+      "child_rss_mb": 0.0,
+      "merge": 3.827547959000185
+    },
+    {
+      "executor": "threads",
+      "workers": 10,
+      "wall": 8.379802749999726,
+      "cpu": 8.355806999999999,
+      "parent_rss_mb": 1024.296875,
+      "child_rss_mb": 0.0,
+      "merge": 4.296338832999936
+    },
+    {
+      "executor": "threads",
+      "workers": 10,
+      "wall": 11.78753641700041,
+      "cpu": 11.31292,
+      "parent_rss_mb": 997.90625,
+      "child_rss_mb": 0.0,
+      "merge": 7.540654999999788
+    },
+    {
+      "executor": "processes",
+      "workers": 2,
+      "wall": 4.636888834000274,
+      "cpu": 6.8963,
+      "parent_rss_mb": 1138.703125,
+      "child_rss_mb": 220.25,
+      "merge": 2.368011834000754
+    },
+    {
+      "executor": "processes",
+      "workers": 2,
+      "wall": 4.6054814579993035,
+      "cpu": 6.929029,
+      "parent_rss_mb": 1141.171875,
+      "child_rss_mb": 218.46875,
+      "merge": 2.3232830420001847
+    },
+    {
+      "executor": "processes",
+      "workers": 2,
+      "wall": 4.50811395799974,
+      "cpu": 6.775116,
+      "parent_rss_mb": 1139.25,
+      "child_rss_mb": 219.828125,
+      "merge": 2.3290955410002425
+    },
+    {
+      "executor": "processes",
+      "workers": 4,
+      "wall": 3.8502785419996144,
+      "cpu": 7.675014999999999,
+      "parent_rss_mb": 1089.625,
+      "child_rss_mb": 158.03125,
+      "merge": 2.508016666000003
+    },
+    {
+      "executor": "processes",
+      "workers": 4,
+      "wall": 3.765009249999821,
+      "cpu": 7.489502999999999,
+      "parent_rss_mb": 1089.171875,
+      "child_rss_mb": 156.109375,
+      "merge": 2.4603654579996146
+    },
+    {
+      "executor": "processes",
+      "workers": 4,
+      "wall": 3.880407833999925,
+      "cpu": 7.734016999999999,
+      "parent_rss_mb": 1089.609375,
+      "child_rss_mb": 155.5,
+      "merge": 2.4861769580002147
+    },
+    {
+      "executor": "processes",
+      "workers": 8,
+      "wall": 3.6460188330001984,
+      "cpu": 9.472935999999999,
+      "parent_rss_mb": 1065.609375,
+      "child_rss_mb": 137.09375,
+      "merge": 2.6502794999996695
+    },
+    {
+      "executor": "processes",
+      "workers": 8,
+      "wall": 3.5818035829997825,
+      "cpu": 9.48738,
+      "parent_rss_mb": 1063.65625,
+      "child_rss_mb": 142.3125,
+      "merge": 2.581893792000301
+    },
+    {
+      "executor": "processes",
+      "workers": 8,
+      "wall": 3.606093208999482,
+      "cpu": 9.556578,
+      "parent_rss_mb": 1065.515625,
+      "child_rss_mb": 140.8125,
+      "merge": 2.582195791000231
+    },
+    {
+      "executor": "processes",
+      "workers": 10,
+      "wall": 3.5777623750000203,
+      "cpu": 9.728832999999998,
+      "parent_rss_mb": 1055.953125,
+      "child_rss_mb": 139.609375,
+      "merge": 2.677074750000429
+    },
+    {
+      "executor": "processes",
+      "workers": 10,
+      "wall": 3.5965624579994255,
+      "cpu": 9.875003999999999,
+      "parent_rss_mb": 1055.359375,
+      "child_rss_mb": 132.828125,
+      "merge": 2.6636666250005874
+    },
+    {
+      "executor": "processes",
+      "workers": 10,
+      "wall": 3.511608917000558,
+      "cpu": 9.750925,
+      "parent_rss_mb": 1057.640625,
+      "child_rss_mb": 145.0625,
+      "merge": 2.5843535000003612
+    }
+  ]
+}

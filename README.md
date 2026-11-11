@@ -134,3 +134,42 @@ CLI: `findex index|search|stats|crawl|serve|vectorize|embed`; `-v/-vv` set the l
 `search --json` emits clean JSON lines on stdout; expected errors exit with code 1 and one line. `uv build` produces the wheel
 (`dist/findex-1.0.0-py3-none-any.whl`); `uv tool install .` puts `findex` on PATH. CI: `.github/workflows/ci.yml` (ruff, pyright, pytest).
 
+## Lab 5 — concurrency and the GIL
+
+`build_partial(paths) -> PartialIndex` (picklable, module-level) + `merge(partials)`; the serial build is `merge([build_partial(all)])`,
+so every executor produces the same index (tested via canonical JSON — raw pickle bytes differ because pickle memoizes by object identity).
+`findex index --executor {serial,threads,processes} --workers N`. Full corpus, no positions, 3 runs each, median
+(`scripts/parallel_bench.py`, plot: `docs/parallel_bench.png`):
+
+| Executor | Workers | Wall (s) | CPU (s) | Peak RSS parent / worker (MB) | Merge (s) | Speedup |
+|---|---|---|---|---|---|---|
+| serial | 1 | 6.8 | 6.8 | 986 / – | 3.3 | 1.00× |
+| threads | 2 | 8.1 | 7.9 | 974 / – | 4.0 | 0.84× |
+| threads | 4 | 7.8 | 7.8 | 980 / – | 3.9 | 0.86× |
+| threads | 8 | 15.7 | 14.9 | 1001 / – | 4.5 | 0.43× |
+| threads | 10 | 8.4 | 8.4 | 1000 / – | 4.3 | 0.81× |
+| processes | 2 | 4.6 | 6.9 | 1139 / 220 | 2.3 | 1.47× |
+| processes | 4 | 3.9 | 7.7 | 1090 / 156 | 2.5 | 1.75× |
+| processes | 8 | 3.6 | 9.5 | 1066 / 141 | 2.6 | 1.87× |
+| processes | 10 | 3.6 | 9.8 | 1056 / 140 | 2.7 | 1.89× |
+
+Free-threaded CPython 3.13t (GIL off, `docs/parallel_bench_freethreaded.md`), threads executor:
+
+| Executor | Workers | Wall (s) | CPU (s) | Speedup vs its own serial |
+|---|---|---|---|---|
+| serial | 1 | 13.2 | 13.2 | 1.00× (but 1.9× slower than the regular build's 6.8 s) |
+| threads | 2 / 4 / 8 / 10 | 10.2 / 8.6 / 8.6 / 8.5 | 12.1 / 12.9 / 25.5 / 30.0 | 1.29× / 1.54× / 1.52× / 1.55× |
+
+I/O-bound counter-benchmark (50 requests to a local server that answers after 100 ms; `docs/io_bound.md`): threads 1/2/4/8/16/32 →
+5.25 / 2.63 / 1.39 / 0.74 / 0.42 / 0.22 s, i.e. 1× → 24× — near-linear, because threads sleep in `recv`, which releases the GIL.
+
+**Explanation.** Tokenizing and counting are pure-Python CPU work: under the GIL only one thread executes bytecode at a time, so
+threads give no speedup (0.84× at 2 threads — switching overhead; the 8-thread row, 0.43×, is lock convoy/contention, and varies from run to run).
+Processes bypass the GIL and reach 1.9×, but at a price visible in the table: CPU time rises from 6.8 s to 9.8 s (spawning interpreters,
+re-importing, pickling partial indexes back) and every worker holds its own ~140–220 MB. The ceiling is **Amdahl's law**: `merge` is serial
+and takes ~2.6 s of the 3.6 s wall time (≈ 72 %), so even infinite workers on the parallel ~1 s part cannot beat ~2.5×; we get 1.89× on 10 cores.
+On the free-threaded build threads finally scale (1.55×) but the single-thread baseline is ~1.9× slower (per-object atomic refcounting/locks),
+CPU time grows with workers (30 s at 10 threads) because of contention, and the merge phase is still serial. No race appeared because
+each worker builds its own private `PartialIndex`; the only shared mutable state would have been a shared `Counter`, which is why it is not shared.
+`--executor processes` is the CLI default, and the entry point is `spawn`-safe (`__main__.py` has the `if __name__ == "__main__"` guard).
+

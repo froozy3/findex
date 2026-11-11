@@ -1,0 +1,160 @@
+{
+  "machine": {
+    "machine": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "cpus": 10,
+    "python": "3.13.12",
+    "gil_enabled": false
+  },
+  "results": [
+    {
+      "executor": "serial",
+      "gil_enabled": false,
+      "workers": 1,
+      "wall": 13.178030875000331,
+      "cpu": 13.180179,
+      "parent_rss_mb": 1015.3125,
+      "child_rss_mb": 0.0,
+      "merge": 2.9597029999995357
+    },
+    {
+      "executor": "serial",
+      "gil_enabled": false,
+      "workers": 1,
+      "wall": 13.153419625000424,
+      "cpu": 13.154876,
+      "parent_rss_mb": 1015.171875,
+      "child_rss_mb": 0.0,
+      "merge": 3.0659688340001594
+    },
+    {
+      "executor": "serial",
+      "gil_enabled": false,
+      "workers": 1,
+      "wall": 12.953457334000632,
+      "cpu": 12.958866,
+      "parent_rss_mb": 1015.296875,
+      "child_rss_mb": 0.0,
+      "merge": 2.945986124999763
+    },
+    {
+      "executor": "threads",
+      "gil_enabled": false,
+      "workers": 2,
+      "wall": 10.160187916000723,
+      "cpu": 12.131034000000001,
+      "parent_rss_mb": 1054.046875,
+      "child_rss_mb": 0.0,
+      "merge": 2.9797013750003316
+    },
+    {
+      "executor": "threads",
+      "gil_enabled": false,
+      "workers": 2,
+      "wall": 10.171157333000338,
+      "cpu": 12.135148999999998,
+      "parent_rss_mb": 1054.109375,
+      "child_rss_mb": 0.0,
+      "merge": 2.9787914170001386
+    },
+    {
+      "executor": "threads",
+      "gil_enabled": false,
+      "workers": 2,
+      "wall": 9.908578334000595,
+      "cpu": 11.872796,
+      "parent_rss_mb": 1054.03125,
+      "child_rss_mb": 0.0,
+      "merge": 2.742975957999988
+    },
+    {
+      "executor": "threads",
+      "gil_enabled": false,
+      "workers": 4,
+      "wall": 8.627156709000701,
+      "cpu": 12.995095000000001,
+      "parent_rss_mb": 1070.390625,
+      "child_rss_mb": 0.0,
+      "merge": 2.8777575829999478
+    },
+    {
+      "executor": "threads",
+      "gil_enabled": false,
+      "workers": 4,
+      "wall": 8.526930542000628,
+      "cpu": 12.876854999999999,
+      "parent_rss_mb": 1070.609375,
+      "child_rss_mb": 0.0,
+      "merge": 2.7345547499999157
+    },
+    {
+      "executor": "threads",
+      "gil_enabled": false,
+      "workers": 4,
+      "wall": 8.564588416999868,
+      "cpu": 12.927029,
+      "parent_rss_mb": 1070.5625,
+      "child_rss_mb": 0.0,
+      "merge": 2.7440014579997296
+    },
+    {
+      "executor": "threads",
+      "gil_enabled": false,
+      "workers": 8,
+      "wall": 8.631278041000769,
+      "cpu": 25.529118999999998,
+      "parent_rss_mb": 1090.515625,
+      "child_rss_mb": 0.0,
+      "merge": 2.71160937500008
+    },
+    {
+      "executor": "threads",
+      "gil_enabled": false,
+      "workers": 8,
+      "wall": 8.642060125000171,
+      "cpu": 25.514327,
+      "parent_rss_mb": 1090.328125,
+      "child_rss_mb": 0.0,
+      "merge": 2.681606291999742
+    },
+    {
+      "executor": "threads",
+      "gil_enabled": false,
+      "workers": 8,
+      "wall": 8.861002999999982,
+      "cpu": 25.884718,
+      "parent_rss_mb": 1090.484375,
+      "child_rss_mb": 0.0,
+      "merge": 2.8961840000001757
+    },
+    {
+      "executor": "threads",
+      "gil_enabled": false,
+      "workers": 10,
+      "wall": 8.477324416000556,
+      "cpu": 30.013941,
+      "parent_rss_mb": 1097.84375,
+      "child_rss_mb": 0.0,
+      "merge": 2.7223009159997673
+    },
+    {
+      "executor": "threads",
+      "gil_enabled": false,
+      "workers": 10,
+      "wall": 8.61775333300011,
+      "cpu": 30.551638,
+      "parent_rss_mb": 1098.359375,
+      "child_rss_mb": 0.0,
+      "merge": 2.8619430000007924
+    },
+    {
+      "executor": "threads",
+      "gil_enabled": false,
+      "workers": 10,
+      "wall": 8.465616417000092,
+      "cpu": 29.918391000000003,
+      "parent_rss_mb": 1098.140625,
+      "child_rss_mb": 0.0,
+      "merge": 2.7468882909997774
+    }
+  ]
+}
