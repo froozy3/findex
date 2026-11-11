@@ -1,0 +1,17 @@
+{
+  "name": "findex",
+  "main": "cloudflare/index.ts",
+  "compatibility_date": "2026-11-01",
+  "containers": [
+    {
+      "class_name": "Findex",
+      "image": "./Dockerfile",
+      "max_instances": 1,
+      "instance_type": "standard"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [{ "name": "FINDEX", "class_name": "Findex" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Findex"] }]
+}

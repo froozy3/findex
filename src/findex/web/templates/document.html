@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}{{ meta.title }} &ndash; findex{% endblock %}
+{% block content %}
+<p><a href="/?q={{ q | urlencode }}">&larr; back to results</a></p>
+<h1>{{ meta.title }}</h1>
+<p class="meta">passage {{ meta.locator }} of {{ meta.path.rsplit("/", 1)[-1] }}</p>
+<article class="document">{{ text }}</article>
+{% endblock %}

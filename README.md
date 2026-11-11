@@ -212,3 +212,36 @@ SKIP robots.txt disallows /private/secret
 retry 1/3 .. 3/3 for /slow (TimeoutError)  ->  ERR /slow 43070ms attempts=4
 ```
 
+## Lab 7 — search on the web
+
+`findex serve index.pkl [--port] [--workers]` runs FastAPI: `GET /search?q&k&scorer&page` (validated, paginated), `GET /docs/{id}`,
+`GET /stats`, `GET /health` (503 until the index is loaded), Swagger at `/docs`, HTML UI at `/` and `/doc/{id}` (Jinja2, highlighted snippets,
+pagination, light/dark). Index loaded once in `lifespan`; configuration via `pydantic-settings` (`INDEX_PATH`, …); Pydantic models at the edge,
+dataclasses inside; request-id middleware and a clean JSON 500. Tests use `TestClient` + `dependency_overrides` (200/422/404/503/500 paths).
+Load tests with `scripts/loadtest.py` (own async load generator — `oha` is not installed here), local machine, 1 500–3 000 requests over 10 mixed queries:
+
+| Target | Route | Concurrency | RPS | p50 (ms) | p95 | p99 |
+|---|---|---|---|---|---|---|
+| local, 1 worker, `async def` | /search-async | 50 | 64 / 63 | 783 / 794 | 876 / 868 | 1114 / 1081 |
+| local, 1 worker, `def` | /search | 50 | 56 / 56 | 868 / 870 | 1200 / 1194 | 1361 / 1410 |
+| local, 1 worker, `def` | /search | 20 | 54 | 356 | 554 | 634 |
+| local, 4 workers, `def` | /search | 50 | 199 / 201 | 227 / 234 | 467 / 437 | 568 / 516 |
+| deployed | – | – | not measured (not deployed) | | | | |
+
+Reading the numbers with Labs 5–6 in mind: the work per request is CPU-bound Python (scoring + snippets), so with one process the GIL caps
+throughput at ~55–65 RPS regardless of concurrency — latency just grows with the queue (p50 356 ms at 20 clients vs 868 ms at 50, same RPS).
+`async def` is ~13 % faster than `def` here because `def` pays a thread-pool hop and GIL contention for no parallelism; I still keep **`def`**
+for `/search`: it runs in the thread pool so `/health` and other requests are not blocked while one search runs (an inline `async def` would stall the
+whole event loop), at a cost of ~13 % throughput. Four worker processes scale to ~200 RPS (3.5×, the same lesson as the processes row of Lab 5).
+The profile in Lab 8 shows why 56 RPS is slow (≈ 15 ms/request): it is snippet generation, not ranking.
+
+**Container.** The multi-stage `Dockerfile` (uv, non-root `uid 1000`, index built inside the image, `HEALTHCHECK`) was built and run locally:
+643 MB image, `/health` → `ok`, `/search` answers, `id` inside = `app`. Through Docker (1 worker, 20 clients, 600 requests):
+45 RPS, p50 419 ms, p95 731 ms, p99 842 ms — slightly below the bare-metal 54 RPS because of Docker Desktop's VM and port forwarding.
+
+**Cloudflare (not live yet).** `wrangler.jsonc` + `cloudflare/index.ts` define a Cloudflare Containers deployment (`npm install && npx wrangler login && npx wrangler deploy`;
+Containers need the Workers Paid plan). I tried `wrangler deploy --temporary` (preview account without login): the Worker uploaded but the Containers API
+rejected the account, so nothing is live. A free alternative is a Cloudflare Tunnel to a locally running container
+(`docker run -p 8001:8000 findex:1.0.0` + `cloudflared tunnel --url http://localhost:8001`), but that publishes this machine and was not started without your say-so.
+Once a URL exists, paste it at the top of this README and run `scripts/loadtest.py <url> --concurrency 20` for the "deployed" row.
+

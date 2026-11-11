@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}{% if q %}{{ q }} &ndash; {% endif %}findex{% endblock %}
+{% block content %}
+<form method="get" action="/" class="search">
+  <input type="search" name="q" value="{{ q }}" placeholder='whale (harpoon OR ahab) NOT pequod  &middot;  "white whale"' autofocus>
+  {% if semantic_available %}
+  <select name="mode" title="search mode">
+    <option value="keyword" {% if mode == "keyword" %}selected{% endif %}>Keyword</option>
+    <option value="semantic" {% if mode == "semantic" %}selected{% endif %}>Semantic</option>
+    <option value="hybrid" {% if mode == "hybrid" %}selected{% endif %}>Hybrid</option>
+  </select>
+  {% endif %}
+  <select name="scorer">
+    <option value="bm25" {% if scorer == "bm25" %}selected{% endif %}>BM25</option>
+    <option value="tfidf" {% if scorer == "tfidf" %}selected{% endif %}>TF-IDF</option>
+  </select>
+  <button type="submit">Search</button>
+</form>
+
+{% if error %}<p class="error">{{ error }}</p>{% endif %}
+
+{% if response %}
+  <p class="meta">{{ response.total }} matching passages &middot; {{ response.took_ms }} ms</p>
+  {% for hit in response.results %}
+    <article class="hit">
+      <h2><a href="/doc/{{ hit.doc_id }}?q={{ q | urlencode }}">{{ hit.title }}</a> <span class="score">{{ "%.2f" | format(hit.score) }}</span></h2>
+      <p>{{ hit.snippet | highlight }}</p>
+    </article>
+  {% else %}
+    <p class="meta">No results.</p>
+  {% endfor %}
+  <nav class="pager">
+    {% if response.page > 1 %}<a href="/?q={{ q | urlencode }}&scorer={{ scorer }}&mode={{ mode }}&page={{ response.page - 1 }}">&larr; previous</a>{% endif %}
+    {% if response.page * response.page_size < response.total %}<a href="/?q={{ q | urlencode }}&scorer={{ scorer }}&mode={{ mode }}&page={{ response.page + 1 }}">next &rarr;</a>{% endif %}
+  </nav>
+{% elif not q %}
+  <p class="meta">{{ stats }} passages indexed. Try <a href="/?q=white+whale">white whale</a>, <a href="/?q=%22my+dear+watson%22">"my dear watson"</a> or <a href="/?q=vampire+OR+dracula">vampire OR dracula</a>.</p>
+{% endif %}
+{% endblock %}
